@@ -16,7 +16,7 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 15
     REFRESH_TOKEN_EXPIRE_DAYS: int = 7
 
-    CORS_ORIGINS: List[str] = ["http://localhost:5173", "http://localhost:5174", "http://localhost:3000"]
+    CORS_ORIGINS: List[str] = ["https://justeatfrontend-yo85.onrender.com", "http://localhost:5173", "http://localhost:3000"]
 
     SMTP_HOST: str = ""
     SMTP_PORT: int = 587
