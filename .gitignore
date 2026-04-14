@@ -1,0 +1,104 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# JustEats — root .gitignore
+# Covers: Python/FastAPI backend, React/Vite frontend, Docker, OS files
+# ─────────────────────────────────────────────────────────────────────────────
+
+
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# Distribution / packaging
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+wheels/
+
+# pytest
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+*.coveragerc
+
+# mypy / pyright
+.mypy_cache/
+.dmypy.json
+.pyright/
+
+# Alembic — keep migrations, ignore generated cache
+alembic/__pycache__/
+alembic/versions/__pycache__/
+
+
+# ── Environment / secrets ────────────────────────────────────────────────────
+# Keep .env.example (template), ignore real .env files that hold secrets
+.env
+.env.*
+!.env.example
+
+
+# ── Node / React / Vite ───────────────────────────────────────────────────────
+node_modules/
+Frontend/node_modules/
+
+# Vite build output
+Frontend/dist/
+Frontend/dist-ssr/
+Frontend/.vite/
+
+# npm / yarn / pnpm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json.bak
+
+
+# ── Docker ────────────────────────────────────────────────────────────────────
+# Ignore local override files; keep docker-compose.yml and render.yaml
+docker-compose.override.yml
+.docker/
+
+
+# ── Editor & IDE ──────────────────────────────────────────────────────────────
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+# ── OS generated ──────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+Desktop.ini
+
+
+# ── Logs ─────────────────────────────────────────────────────────────────────
+*.log
+logs/
+
+
+# ── Misc ─────────────────────────────────────────────────────────────────────
+*.local
+*.bak
+*.tmp
