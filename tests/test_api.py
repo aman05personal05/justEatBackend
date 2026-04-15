@@ -1,5 +1,5 @@
 """
-Pytest test suite for the JustEats API.
+Pytest test suite for the JustEat API.
 
 Covers (≥ 10 tests):
   1.  register – success

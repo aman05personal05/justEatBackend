@@ -170,6 +170,12 @@ async def reset_password(payload: ResetPasswordRequest, db: AsyncSession = Depen
     return {"message": "Password updated successfully. Please log in with your new password."}
 
 
+@router.get("/me", response_model=UserOut)
+async def get_me(current_user: User = Depends(get_current_user)):
+    """Return the currently authenticated user."""
+    return current_user
+
+
 @router.post("/change-password", response_model=MessageResponse, status_code=status.HTTP_200_OK)
 async def change_password(
     payload: ChangePasswordRequest,
